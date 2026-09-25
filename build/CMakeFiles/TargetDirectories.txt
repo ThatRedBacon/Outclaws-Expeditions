@@ -1,0 +1,3 @@
+C:/Programs/Outclaws-Expeditions/Outclaws-Expeditions/build/CMakeFiles/OutclawsExpeditions.dir
+C:/Programs/Outclaws-Expeditions/Outclaws-Expeditions/build/CMakeFiles/ALL_BUILD.dir
+C:/Programs/Outclaws-Expeditions/Outclaws-Expeditions/build/CMakeFiles/ZERO_CHECK.dir

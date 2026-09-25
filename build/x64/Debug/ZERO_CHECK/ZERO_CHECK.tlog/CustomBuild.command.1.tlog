@@ -1,0 +1,10 @@
+^C:\PROGRAMS\OUTCLAWS-EXPEDITIONS\OUTCLAWS-EXPEDITIONS\BUILD\CMAKEFILES\066351B743114B962D79285999249F5B\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Programs/Outclaws-Expeditions/Outclaws-Expeditions -BC:/Programs/Outclaws-Expeditions/Outclaws-Expeditions/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Programs/Outclaws-Expeditions/Outclaws-Expeditions/build/MyCppProject.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
