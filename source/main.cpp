@@ -4,10 +4,18 @@
 int main() {
     auto startTime = std::chrono::steady_clock::now();
     auto currentTime = std::chrono::steady_clock::now();
-    auto elapsedtime = currentTime - startTime;
+    auto elapsedTime = std::chrono::duration<double>(currentTime - startTime);
 
-    auto targetTime = 5.0;
+    auto targetTime = std::chrono::duration<double>(5.0);
+
+    while (elapsedTime < targetTime) {
+        currentTime = std::chrono::steady_clock::now();
+        elapsedTime = std::chrono::duration<double>(currentTime - startTime);
+    }
     
+    std::cout << "5 seconds passed";
+
+    std::cout << targetTime << " " << elapsedTime;    
 
     return 0;
 }
