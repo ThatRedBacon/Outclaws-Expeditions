@@ -1,0 +1,19 @@
+// there will be numerous timers for the expeditions:
+// one timer is the team's travel time between Scorpion Den and target region (same time back and forth)
+// second timer tracks how long the team has been exploring
+// third timer is the cooldown between loot objects being found
+// fourth timer is how long the team goes while eligible for finding loot (chances increase slowly over time)
+
+// for timer class:
+// timer needs: 
+//      name (travel, cooldown, runtimes, loot eligibility)
+//      start time, current time
+
+// functions:
+//      constructor (sets name to name input)
+//      set startTime (when called, set startTime to chrono time-now)
+//      set currentTime (when called, updates the current time of this timer with chrono time-now)
+//      set elapsedTime (when called, set elapsed time (current time - startTime))
+//      functions to return each time variable
+
+// expedition manager will handle things like loot eligibility, loot items, conditions to check timers runtimes, etc.
