@@ -1,0 +1,81 @@
+
+# =========================
+# CMake build output
+# =========================
+build/
+/build/
+cmake-build-*/
+out/build/
+
+# Generated CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+Testing/
+
+# =========================
+# Compiled binaries and objects
+# =========================
+*.obj
+*.o
+*.pch
+*.pdb
+*.ilk
+*.idb
+*.lib
+*.exp
+*.exe
+*.dll
+
+# =========================
+# Visual Studio / MSVC
+# =========================
+.vs/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# =========================
+# VS Code
+# =========================
+# Ignore only machine-specific workspace settings.
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/c_cpp_properties.json
+
+# =========================
+# CMake local configuration
+# =========================
+CMakeUserPresets.json
+
+# =========================
+# Debugging and profiling
+# =========================
+*.stackdump
+*.dmp
+
+# =========================
+# Temporary files and logs
+# =========================
+*.log
+*.tmp
+*.temp
+*.bak
+*~
+
+# =========================
+# OS-generated files
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
