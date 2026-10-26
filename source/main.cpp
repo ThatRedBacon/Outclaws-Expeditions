@@ -1,5 +1,6 @@
 #include <iostream>
 #include <chrono>
+#include "classExpeditionTimer.h"
 
 int main() {
     auto startTime = std::chrono::steady_clock::now();
@@ -15,7 +16,9 @@ int main() {
     
     std::cout << "5 seconds passed";
 
-    std::cout << targetTime << " " << elapsedTime;    
+    std::cout << targetTime << " " << elapsedTime;
+    
+    
 
     return 0;
 }
