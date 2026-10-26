@@ -14,7 +14,7 @@ class ExpeditionTimer {
         ExpeditionTimer(string timerName);
 
         // starts timer
-        void start();
+        void setStartTime();
 
         // sets current time
         void setCurrentTime();
