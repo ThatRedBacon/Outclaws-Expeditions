@@ -16,9 +16,13 @@ int main() {
     
     std::cout << "5 seconds passed";
 
-    std::cout << targetTime << " " << elapsedTime;
+    std::cout << targetTime << " " << elapsedTime << "\n";
     
-    
+    ExpeditionTimer TestTimer("Test Timer");
+    TestTimer.setCurrentTime();
+    auto nowRaw = TestTimer.getCurrentTime();
+    auto nowClean = nowRaw.time_since_epoch().count();
+    std::cout << "test timer: " << nowClean;
 
     return 0;
 }

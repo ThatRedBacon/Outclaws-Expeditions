@@ -8,4 +8,5 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(OutclawsExpeditions
     source/main.cpp
+    source/classExpeditionTimer.cpp
 )
