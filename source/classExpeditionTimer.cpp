@@ -1,4 +1,6 @@
 #include "classExpeditionTimer.h"
+#include <thread>
+using namespace std;
 
 // constructor
 ExpeditionTimer::ExpeditionTimer(string inputName) : timerName(inputName) {
@@ -30,5 +32,8 @@ chrono::steady_clock::time_point ExpeditionTimer::getCurrentTime() {
 
 chrono::duration<double> ExpeditionTimer::getElapsedTime() {
     return elapsedTime;
+}
 
+void ExpeditionTimer::timerSleep(chrono::milliseconds duration) {
+    this_thread::sleep_for(duration);
 }

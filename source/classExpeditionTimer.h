@@ -26,4 +26,7 @@ public:
     chrono::steady_clock::time_point getStartTime();
     chrono::steady_clock::time_point getCurrentTime();
     chrono::duration<double> getElapsedTime();
+
+    // timer sleeps for target milliseconds
+    void timerSleep(chrono::milliseconds duration);
 };

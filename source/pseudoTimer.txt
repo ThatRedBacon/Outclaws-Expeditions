@@ -16,4 +16,9 @@
 //      set elapsedTime (when called, set elapsed time (current time - startTime))
 //      functions to return each time variable
 
+// when it comes to checking if a timer has reached a certain condition, code should follow this flow:
+// while (timer's elapsed time doesn't meet condition):
+//      timer function sleeps for a specific amount of time (1ms, 5ms, 3s, etc.)
+//      timer function updates its elapsed time to repeat loop
+
 // expedition manager will handle things like loot eligibility, loot items, conditions to check timers runtimes, etc.

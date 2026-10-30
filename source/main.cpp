@@ -7,22 +7,26 @@ int main() {
     auto currentTime = std::chrono::steady_clock::now();
     auto elapsedTime = std::chrono::duration<double>(currentTime - startTime);
 
-    auto targetTime = std::chrono::duration<double>(5.0);
+    auto targetTime = std::chrono::duration<double>(3.0);
 
     while (elapsedTime < targetTime) {
         currentTime = std::chrono::steady_clock::now();
         elapsedTime = std::chrono::duration<double>(currentTime - startTime);
     }
     
-    std::cout << "5 seconds passed";
+    std::cout << "3 seconds passed";
 
     std::cout << targetTime << " " << elapsedTime << "\n";
     
-    ExpeditionTimer TestTimer("Test Timer");
-    TestTimer.setCurrentTime();
-    auto nowRaw = TestTimer.getCurrentTime();
-    auto nowClean = nowRaw.time_since_epoch().count();
-    std::cout << "test timer: " << nowClean;
+    ExpeditionTimer TestTimerCurrent("Test Timer: Current Time");
+    TestTimerCurrent.setCurrentTime();
+    auto nowRaw = TestTimerCurrent.getCurrentTime();
+    std::chrono::duration<double> nowClean = nowRaw.time_since_epoch();
+    std::cout << "test timer current time: " << nowClean.count();
+
+    ExpeditionTimer TestTimer2("Test Timer: Timer 2, Elapsed Time Testing");
+    TestTimer2.setStartTime();
+    
 
     return 0;
 }
