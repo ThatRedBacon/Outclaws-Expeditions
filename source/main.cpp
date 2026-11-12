@@ -19,13 +19,10 @@ int main() {
     std::cout << targetTime << " " << elapsedTime << "\n";
     
     ExpeditionTimer TestTimerCurrent("Test Timer: Current Time");
+    TestTimerCurrent.setStartTime();
+    TestTimerCurrent.timerSleep(std::chrono::milliseconds(1600));
     TestTimerCurrent.setCurrentTime();
-    auto nowRaw = TestTimerCurrent.getCurrentTime();
-    std::chrono::duration<double> nowClean = nowRaw.time_since_epoch();
-    std::cout << "test timer current time: " << nowClean.count();
-
-    ExpeditionTimer TestTimer2("Test Timer: Timer 2, Elapsed Time Testing");
-    TestTimer2.setStartTime();
+    std::cout << "Elapsed Time: " << TestTimerCurrent.getElapsedTime().count() << " seconds\n";
     
 
     return 0;

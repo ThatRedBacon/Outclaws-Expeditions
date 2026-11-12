@@ -31,6 +31,7 @@ chrono::steady_clock::time_point ExpeditionTimer::getCurrentTime() {
 }
 
 chrono::duration<double> ExpeditionTimer::getElapsedTime() {
+    setElapsedTime(); 
     return elapsedTime;
 }
 
