@@ -18,12 +18,14 @@ void ExpeditionTimer::setCurrentTime() {
 }
 
 void ExpeditionTimer::setElapsedTime() {
+    setCurrentTime();
     elapsedTime = chrono::duration<double>(currentTime - startTime);
 }
 
 // return functions for three time variables
 chrono::steady_clock::time_point ExpeditionTimer::getStartTime() {
-    return startTime;
+    chrono::duration<double> startTimeClean = chrono::duration<double>(startTime);
+    return startTimeMS;
 }
 
 chrono::steady_clock::time_point ExpeditionTimer::getCurrentTime() {
@@ -35,6 +37,6 @@ chrono::duration<double> ExpeditionTimer::getElapsedTime() {
     return elapsedTime;
 }
 
-void ExpeditionTimer::timerSleep(chrono::milliseconds duration) {
-    this_thread::sleep_for(duration);
+void ExpeditionTimer::timerSleep(int duration) {
+    this_thread::sleep_for(chrono::milliseconds(duration));
 }

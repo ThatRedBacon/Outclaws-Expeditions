@@ -28,5 +28,5 @@ public:
     chrono::duration<double> getElapsedTime();
 
     // timer sleeps for target milliseconds
-    void timerSleep(chrono::milliseconds duration);
+    void timerSleep(int duration);
 };
