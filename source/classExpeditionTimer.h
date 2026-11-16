@@ -25,7 +25,7 @@ public:
     // return functions for three time variables
     double getStartTime() const;
     chrono::steady_clock::time_point getCurrentTime();
-    chrono::duration<double> getElapsedTime();
+    double getElapsedTime();
 
     // timer sleeps for target milliseconds
     void timerSleep(int duration);
