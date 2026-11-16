@@ -9,4 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(OutclawsExpeditions
     source/main.cpp
     source/classExpeditionTimer.cpp
+    tests/testTimer.cpp
 )
+
+target_include_directories(OutclawsExpeditions PUBLIC tests)
