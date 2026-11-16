@@ -23,9 +23,11 @@ void ExpeditionTimer::setElapsedTime() {
 }
 
 // return functions for three time variables
-chrono::steady_clock::time_point ExpeditionTimer::getStartTime() {
-    chrono::duration<double> startTimeClean = chrono::duration<double>(startTime);
-    return startTimeMS;
+double ExpeditionTimer::getStartTime() const {
+    auto startTimeClean = chrono::duration<double, std::milli>(
+        startTime.time_since_epoch()
+    );
+    return startTimeClean.count();
 }
 
 chrono::steady_clock::time_point ExpeditionTimer::getCurrentTime() {

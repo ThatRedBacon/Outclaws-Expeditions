@@ -23,7 +23,7 @@ public:
     void setElapsedTime();
 
     // return functions for three time variables
-    chrono::steady_clock::time_point getStartTime();
+    double getStartTime() const;
     chrono::steady_clock::time_point getCurrentTime();
     chrono::duration<double> getElapsedTime();
 
