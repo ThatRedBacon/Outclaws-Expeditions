@@ -11,7 +11,7 @@ private:
     
 public:
     // constructor
-    ExpeditionTimer(string inputName);
+    ExpeditionTimer(string inputName = "timer");
 
     // starts timer
     void setStartTime();
